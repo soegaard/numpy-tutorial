@@ -150,7 +150,7 @@ This board possesses a ``0`` border that allows to accelerate things a bit by
 avoiding to have specific tests for borders when counting the number of
 neighbours. First step is to count neighbours::
 
-  def compute_neigbours(Z):
+  def compute_neighbours(Z):
       shape = len(Z), len(Z[0])
       N  = [[0,]*(shape[0])  for i in range(shape[1])]
       for x in range(1,shape[0]-1):
@@ -176,7 +176,7 @@ each internal cell and we update the whole board according to the 4 rules::
 
 .. note::
 
-   The ``show`` command is supplied witht he script.
+   The ``show`` command is supplied with the script.
 
 
 Using a dedicated display function, we can check the program's correct::
@@ -322,7 +322,7 @@ if*) it was a regular scalar::
   [4 4 4 4 4 4]
   [4 4 4 4 4 4]]
 
-If you look carefully at the output, you may realize that the ouptut
+If you look carefully at the output, you may realize that the output
 corresponds to the formula above applied individually to each element. Said
 differently, we have ``(1+(2*Z+3))[i,j] == (1+(2*Z[i,j]+3))`` for any i,j.
 
