@@ -164,6 +164,7 @@ To iterate one step in time, we then simply count the number of neighbours for
 each internal cell and we update the whole board according to the 4 rules::
 
   def iterate(Z):
+      shape = len(Z), len(Z[0])
       N = compute_neighbours(Z)
       for x in range(1,shape[0]-1):
           for y in range(1,shape[1]-1):
